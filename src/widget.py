@@ -14,7 +14,7 @@ def get_data(date: str) -> str:
     year = date[:4]
     month = date[5:7]
     day = date[8:10]
-    result = day + ' ' + month + ' ' + year
+    result = day + '.' + month + '.' + year
     return result
 
 
