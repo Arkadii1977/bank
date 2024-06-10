@@ -1,4 +1,3 @@
-'''
 def get_mask_card_number(card_number: str) -> str:
     """функция возвращает маску карты"""
     masked_card_number = card_number[:4] + " " + card_number[4:6] + "** **** " + card_number[-4:]
@@ -17,4 +16,4 @@ account_input: str = input()
 
 print(get_mask_card_number(card_number_input))
 print(get_mask_account(account_input))
-'''
+
