@@ -1,36 +1,34 @@
+from masks import get_mask_card_number
+from masks import get_mask_account
+
+
 def mask_account_card(card_input: str) -> str:
     """Функция возвращает номер карты или номер счета"""
     card_information = card_input.split()
     if len(card_information) == 3:
         card_number = card_information[2]
-        return card_number
-    elif len(card_information) == 2:
+        result = card_information[0] + " " + card_information[1] + " " + get_mask_card_number(card_number)
+        return result
+    elif "Счет" in card_information:
+        bill_number = card_information[1]
+        result = card_information[0] + " " + get_mask_account(bill_number)
+        return result
+    else:
         card_number = card_information[1]
-        return card_number
+        result = card_information[0] + " " + get_mask_card_number(card_number)
+        return result
 
 
-def get_data(date: str) -> str:
-    """функция возвращает дату"""
-    year = date[:4]
-    month = date[5:7]
-    day = date[8:10]
-    result = day + '.' + month + '.' + year
+def get_data(date_input: str) -> str:
+    """Функция возвращает преобразованную дату и время"""
+    year = date_input[:4]
+    month = date_input[5:7]
+    day = date_input[8:10]
+    result = day + "." + month + "." + year
     return result
 
 
-"""Вводим карту/счет"""
-user_input: str = input()
-"""Вводим дату"""
-user_date_input: str = input()
-"""Проверяем присутствует ли имя карты"""
-card_info = user_input.split()
-if len(card_info) == 3:
-    name = card_info[:2]
-    card_type = ' '.join(str(x) for x in name)
-elif len(card_info) == 2:
-    if "Счет" in card_info:
-        card_type = "Счет"
-    else:
-        card_type = card_info[0]
-card_number_input: str = mask_account_card(user_input)
-account_input: str = mask_account_card(user_input)
+card_or_bill_input: str = input()
+date_user_input: str = input()
+print(mask_account_card(card_or_bill_input))
+print(get_data(date_user_input))
