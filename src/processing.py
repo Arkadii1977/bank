@@ -1,5 +1,5 @@
 def filter_by_state(unfiltered_state_input: list) -> str:
-    """Функция возвращает операции, отфильтрованные на две группы"""
+    """отфильтрованные на две группы"""
     dictionary_1 = []
     dictionary_2 = []
     for item in unfiltered_state_input:
