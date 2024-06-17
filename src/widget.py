@@ -1,5 +1,5 @@
-from masks import get_mask_card_number
-from masks import get_mask_account
+from src.masks import get_mask_card_number
+from src.masks import get_mask_account
 
 
 def mask_account_card(card_input: str) -> str:
@@ -26,9 +26,3 @@ def get_data(date_input: str) -> str:
     day = date_input[8:10]
     result = day + "." + month + "." + year
     return result
-
-
-card_or_bill_input: str = input()
-date_user_input: str = input()
-print(mask_account_card(card_or_bill_input))
-print(get_data(date_user_input))
