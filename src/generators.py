@@ -86,10 +86,10 @@ def filter_by_currency(money_move, currency):
             yield action
 
 
-usd_transactions = filter_by_currency(transactions, "USD")
+#usd_transactions = filter_by_currency(transactions, "USD")
 
-for transaction in range(2):
-    print(next(usd_transactions)["id"])
+#for transaction in range(2):
+#    print(next(usd_transactions)["id"])
 
 
 def transaction_descriptions(money_move):
@@ -98,10 +98,10 @@ def transaction_descriptions(money_move):
         yield action['description']
 
 
-descriptions = transaction_descriptions(transactions)
+#descriptions = transaction_descriptions(transactions)
 
-for transaction in range(5):
-    print(next(descriptions))
+#for transaction in range(5):
+#    print(next(descriptions))
 
 
 def card_number_generator(start, stop):
@@ -112,5 +112,5 @@ def card_number_generator(start, stop):
         yield formatted_card_num
 
 
-for card_number in card_number_generator(1, 2000):
-    print(card_number)
+#for card_number in card_number_generator(1, 10):
+#    print(card_number)
