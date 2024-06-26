@@ -13,7 +13,7 @@ def test_log():
 
 
 def test_log_second():
-    @log
+    @log()
     def addd(a, b):
         return a + b
     with pytest.raises(Exception):
