@@ -1,0 +1,5 @@
+INFO:root:my_function ok
+INFO:root:add ok
+ERROR:root:add error: unsupported operand type(s) for +: 'int' and 'str' Inputs (3, '3'), {}
+ERROR:root:add error: unsupported operand type(s) for +: 'int' and 'str' Inputs (3, '3'), {}
+ERROR:root:add error: unsupported operand type(s) for +: 'int' and 'str' Inputs (3, '3'), {}
