@@ -18,3 +18,12 @@ def test_log_second():
         return a + b
     with pytest.raises(Exception):
         addd(3, "3")
+
+
+def test_log_third():
+    @log("log.txt")
+    def adddd(a, b):
+        return a + b
+
+    result = adddd(3, 3)
+    assert result == 6
